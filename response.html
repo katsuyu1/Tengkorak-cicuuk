@@ -1,0 +1,29 @@
+<!--
+	NOTE: This demo uses ES module imports and remote libraries. Browsers
+	block module imports on the file:// protocol. Run this page with a
+	local HTTP server (for example VS Code Live Server) or any other
+	simple static server so modules and external assets load correctly.
+
+	Quick ways to run locally:
+		- VS Code: install and run "Live Server"
+		- Node: run `npx http-server` or `npx serve`
+		- Python: `python -m http.server 8000`
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="world"></div>
+	<!-- Load dependencies first so `script.js` (module) can use them -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r120/three.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.6/dat.gui.min.js"></script>
+	<script type="module" src="script.js"></script>
+
+</body>
+</html>
